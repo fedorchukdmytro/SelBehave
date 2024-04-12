@@ -1,23 +1,31 @@
 from behave import *
 from test import *
-# from selene import *
 
-@given('a Google')
+
+@given('a Zombie site')
 def step_impl(context):
-    context.google = Google()
+    context.zombie = Zombie()
 
-@when('open Google page')
+@when('open home page')
 def step_impl(context):
-    context.google.open_site()
+    context.zombie.open_site()
 
-@when('check link {images}')
-def check_link(context, images):
-    context.google.check_link(images)
+@when('check link home')
+def check_link(context):
+    context.zombie.check_link_home()
+
+@when('check link blog')
+def check_link(context):
+    context.zombie.check_link_blog()
+
+@when('check link brains')
+def check_link(context):
+    context.zombie.check_link_brains()
 
 
 @when('set text in field')
 def step_impl(context):
-    context.google.search()
+    context.zombie.search()
 
 # @then('see the list result of search')
 # def step_impl(context):
