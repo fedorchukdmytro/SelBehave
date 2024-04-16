@@ -1,8 +1,13 @@
 Feature: Testing Zombie site
 Scenario: Testing homepage
   Given a Zombie site
-  When open home page
-  When check link blog
-  When check link brains
-  When check link home
+  Then open home page
+  Then test element blog
+  Then test element brains
+  Then test element home
+  Then test element more
+  Then test element regular
+  Then test element lite
+  Then close window
+  
   
